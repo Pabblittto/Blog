@@ -4,7 +4,7 @@ from django.contrib.auth.models import User
 from django.core.validators import MinValueValidator, MaxValueValidator
 
 # Create your models here.
-
+"""
 class Blog(models.Model):
     ID_Bloga=models.IntegerField(primary_key=True)#nie dajemy maksymalnej bo i tak bedzie bralo po kolei a max_length nie dziala z intem
     Nazwa_Bloga=models.CharField(max_length=128)
@@ -32,3 +32,4 @@ class Komentarz(models.Model):
     tresc=models.TextField()
 
 
+"""
