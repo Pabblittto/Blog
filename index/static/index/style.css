@@ -1,0 +1,55 @@
+:root{
+--color-one:#F3FFB6;
+--color-two:#D38B5D;
+--color-three:rgb(196, 104, 47);/* jakiej najechanie myszką*/
+--color-slogan:#F3FFB6;
+}
+
+
+.color-one{
+background-color:var(--color-one);
+
+}
+.color-two{
+    background-color: var(--color-two);
+}
+
+.navbar-text{
+    color: rgb(255, 255, 255);
+}
+.navbar-style{
+    padding: 5px 5px 5px;
+    color: black;
+}
+
+.navbar-selector{
+    margin: 8px 0 8px;
+}
+
+.navbar-style:hover {
+background-color: var(--color-three); 
+text-decoration: none ;
+color:white;
+}
+
+.navbar-borders{
+    border-right: 1px black solid;
+
+}
+a{
+    color: black;
+}
+
+a:hover{
+    text-decoration: none;
+    color: white;
+}
+
+.slogan{
+    font-family: 'Pacifico', cursive;
+    color: var(--color-slogan);
+}
+
+.main-container{
+    font-family: 'Roboto', sans-serif;
+}
