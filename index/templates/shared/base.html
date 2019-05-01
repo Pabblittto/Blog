@@ -6,7 +6,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-
+<title>Blogger</title>
 <link href="https://fonts.googleapis.com/css?family=Pacifico" rel="stylesheet"> <!--czcionka-->
 <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet"><!--czcionka-->
 <!--font awesome - do fajnych ikonek-->
@@ -19,15 +19,15 @@
 </head>
 
 <body class="color-two main-container">
-          <div> <!--this is all elements on the top-->
-                  <div class="slogan  text-center">
+            <div> <!--this is all elements on the top-->
+                  <div class="slogan  text-center navbar-expand-lg color-one ">
                         <p class="slogan h4" >Blogger...ponieważ każdy może tworzyć</p>
                   </div>
                   <nav class="navbar navbar-expand-lg navbar-light color-one p-0 row m-0">
-                         <div class="col-6 row p-0 m-0">
-                               <div class="navbar-style text-center navbar-borders">
-                                    <a href="#" class="">
-                                          <div class=" ">
+                        <div class="col-6 row p-0 m-0">
+                              <div class="navbar-style text-center navbar-borders">
+                                    <a href="/" class="">
+                                          <div class="">
                                                 <p class="m-0"> <i class="fas fa-home"></i> Home</p>
                                           </div>
                                     </a>
@@ -41,31 +41,51 @@
                               </div>
                         </div>
                         <div class="col-6 row p-0 m-0 justify-content-end">
+                                    <div class=" row justify-content-end" style="font-size: 10px; margin: 2px">
+                                                <div class="input-group-prepend">
+                                                            <button class="my-button "  type="button">Szukaj</button>
+                                                </div>
+                                                <div>
+                                                      <input type="text" class="" style="height: 28px" placeholder="wyszukaj" >
+                                                </div>
+                                    </div>
+
                               <div class="navbar-style text-center navbar-borders" style="border-left: 1px black solid;">
-                                    <a href="#" class="">
+                                    <a href="{% url 'registration' %}" class="">
                                           <div class=" ">
                                                 <p class="m-0"><i class="fas fa-door-open"></i>  Register </p>
                                           </div>
                                     </a>
                               </div>
 
-                               <div class="navbar-style text-center navbar-borders">
-                                    <a href="#" class="">
+                              <div class="navbar-style text-center navbar-borders">
+                                    <a href="{% url 'login' %}" class="">
                                           <div class=" ">
                                                 <p class="m-0"> <i class="fas fa-sign-in-alt"></i> Login</p>
                                           </div>
                                     </a>
                               </div>
 
+
                         </div>  
                   </nav>
+                  {% if messages %}
+                        {% for message in messages %}
+                              <div class="alert alert-success">
+                                    {{message}}
+                              </div>
+                        {% endfor%}
+                  {% endif %}
             </div>
+            
+      <div class=" container content-holder p-0">
+            <div class=" container row "  style="opacity: 1;"><!-- container of all elements-->
+                  
+      
+      {% block content%}
 
-      <div class=" container"><!-- container of all elements-->
-  
-{% block content%}
-
-{%endblock%}
+      {%endblock content%}
+            </div>
       </div>
 <footer class="page-footer "> </footer>
 <!--ponizej sa linki do bootstrapa-->
