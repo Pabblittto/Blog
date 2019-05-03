@@ -5,23 +5,23 @@ from django.contrib.auth.forms import UserCreationForm
 from django.contrib import messages
 from django.db import models
 from django.contrib.auth.models import User
-from .models import Uzytkownik
+from .models import Uzytkownik, Post, Blog
+from django.contrib.auth import views as auth_views
 
-# Create your views here.
+
 def home(request):
-    # tu trzeba pobrac z bazy danych najnowsze elementy
-    return render(request,'index/index.html')
-
-
-def login(request):
-    if request.method == 'POST':
-        Form= LoginForm(request.POST)
-        if Form.is_valid():
-            pass
+    posts = Post.objects.all()
+    blogs = Blog.objects.all()
+    users = User.objects.all()
+    data = {
+        'posts' : posts,
+        'blogs' : blogs,
+        'users' : users
+    }
+    if request.user.is_authenticated:
+        return render(request,'shared/base.html',data)
     else:
-        Form= LoginForm()
-    return render(request,'index/login.html',{'form':Form})
-
+        return render(request,'shared/base.html',data)
 
 def registration(request):
     if request.method == 'POST':

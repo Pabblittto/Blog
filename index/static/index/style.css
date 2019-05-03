@@ -1,74 +1,72 @@
-:root{
---color-one:#D38B5D;/*navbar*/
---color-two:#f3ffb6;
---color-three:rgb(135, 74, 36);/* jakiej najechanie myszką*/
---color-slogan:rgb(101, 48, 17);
+#Title
+{
+    float: left;
+    margin: 10px;
+    font-size: 26px;
+    padding: 15px;
+    
 }
-
-
-.color-one{
-background-color:var(--color-one);
-
+#NavBar
+{
+    float : right;
+    margin-right: 20px;
 }
-.color-two{
-    background-color: var(--color-two);
+.Nav
+{
+    float : left;
+    padding: 15px; 
 }
-
-.navbar-text{
-    color: rgb(255, 255, 255);
-}
-.navbar-style{
-    padding: 5px 5px 5px;
+.MenuA
+{
+    float: left;
+    display: block;
     color: black;
-}
-
-.navbar-selector{
-    margin: 8px 0 8px;
-}
-
-.navbar-style:hover {
-background-color: var(--color-three); 
-text-decoration: none ;
-color:white;
-}
-
-.navbar-borders{
-    border-right: 1px black solid;
-
-}
-a{
-    color: black;
-}
-
-a:hover{
+    text-align: center;
+    padding: 15px;
+    margin: 10px 10px 0px 10px;
+    border: dotted 0.5px;
     text-decoration: none;
+    transition: 0.3s ease;
+    opacity: 0.7;
+}
+.MenuA:hover
+{
+    background-color: gray;
     color: white;
+    opacity: 1;
 }
-
-.slogan{
-    font-family: 'Pacifico', cursive;
-    color: var(--color-slogan);
-    margin: 0px;
+.MenuA:visited
+{
+    text-decoration: none;
 }
-
-.main-container{
-    font-family: 'Roboto', sans-serif;
-    background-image: url("foto.jpg");
-    position: static;
-    height: 3000;;
+.MenuA:active
+{
+    text-decoration: none;
+}
+#Container
+{
     width: auto;
+    height: auto;
+    padding: 10px;
+    margin: 10px;
+    background-color: rgb(219, 218, 218);
 }
-
-.content-holder{
-background-color: rgb(255, 255, 255,0.5);
-
-
+.Post_Date
+{
+    text-align: right;
+    font-weight: bold;
+    margin-right: 10px;
 }
-
-.my-button{
-height: 28px;
-border-top-left-radius: 10%;
-border-bottom-left-radius: 10%;
-background-color: var(--color-one);
-
+.Post_Title
+{
+    font-size: 30px;
+    font-style: italic;
+    margin-bottom: 10px;
+    text-align: center;
+    font-weight: bold;
+}
+.Post_Content
+{
+    font-size: 15px;
+    margin-left: 10px;
 }

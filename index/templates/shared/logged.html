@@ -1,0 +1,13 @@
+<head>
+<link rel="stylesheet" type="text/css" href="{% static 'index/style.css' %}">
+</head>
+{% load static %}
+{%extends "shared/base.html"%}
+{%block title %}
+<h4>Wylogowany</h4>
+<div style="clear: both"></div>
+{%endblock%}
+{% block content %}
+<a href="{% url 'index' %}" class="MenuA">Main Page</a>
+<a href="{% url 'Login' %}" class="MenuA">Login</a>
+{% endblock %}
