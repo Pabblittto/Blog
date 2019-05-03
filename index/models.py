@@ -2,6 +2,8 @@ from django.db import models
 from django.utils import timezone
 from django.contrib.auth.models import User
 from django.core.validators import MinValueValidator, MaxValueValidator
+from django.dispatch import receiver
+from django.db.models.signals import post_save
 
 # Create your models here.
 
@@ -23,6 +25,15 @@ class Uzytkownik(models.Model):
     User=models.OneToOneField(User,on_delete=models.CASCADE,primary_key=True) #dziedziczenie pola z wbudowanej tabeli User
     zdjecie_profilowe=models.ImageField(default='domyslny_obrazek.jpg',upload_to='Obrazki')
     opis_profilu=models.CharField(max_length=1000)
+
+@receiver(post_save, sender=User)
+def create_user_uzytkownik(sender, instance, created, **kwargs):
+    if created:
+        Uzytkownik.objects.create(user=instance)
+
+@receiver(post_save, sender=User)
+def save_user_uzytkownik(sender, instance, **kwargs):
+    instance.Uzytkownik.save()
 
 class Komentarz(models.Model):
     ID_Komentarza=models.IntegerField(primary_key=True)
