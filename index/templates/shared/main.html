@@ -1,0 +1,14 @@
+{%extends "shared/base.html"%}
+{% block content %}
+{% for post in posts %}
+<div class="Post_Info">
+      {% for blog in blogs %}
+      {% if blog == post.ID_Bloga %}
+      <strong>{{blog.Nazwa_Bloga}}</strong>
+      {% endif %}
+      {% endfor %}
+      |{{post.data_zamieszczenia}}</div>
+<div class="Post_Title">{{post.Tytul_Posta}}</div>
+<div class="Post_Content">{{post.tresc}}</div>
+{% endfor %}
+{% endblock %}    

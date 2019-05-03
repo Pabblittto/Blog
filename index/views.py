@@ -8,7 +8,13 @@ from django.contrib.auth.models import User
 from .models import Uzytkownik, Post, Blog
 from django.contrib.auth import views as auth_views
 
-
+def profile(request):
+    if request.user.is_authenticated:
+        actualUser = request.user
+        data = {
+            'user' : actualUser
+        }
+        return render(request,'shared/profile.html',data)
 def home(request):
     posts = Post.objects.all()
     blogs = Blog.objects.all()
@@ -19,9 +25,9 @@ def home(request):
         'users' : users
     }
     if request.user.is_authenticated:
-        return render(request,'shared/base.html',data)
+        return render(request,'shared/main.html',data)
     else:
-        return render(request,'shared/base.html',data)
+        return render(request,'shared/main.html',data)
 
 def registration(request):
     if request.method == 'POST':
@@ -30,7 +36,7 @@ def registration(request):
             messages.success(request,'udalo sie, form jest dobry')
             NewUser= User(username=Form.data.get('UserName'),password=Form.data.get('Password'),email=Form.data.get('Email'))
             NewUser.save()
-            Uzytkownika= Uzytkownik(User=User.objects.get(username=Form.data.get('UserName')),opis_profilu='siemak jestem nowy')
+            Uzytkownika= Uzytkownik(User=User.objects.get(username=Form.data.get('UserName')),opis_profilu=Form.data.get('Opis'))
             Uzytkownika.save()
             return redirect('index')
         else:

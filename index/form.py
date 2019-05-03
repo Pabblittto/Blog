@@ -15,10 +15,12 @@ class RegisterForm(forms.Form):
         label=('Password')
 
         )
+  
     RepeatPassword= forms.CharField(
         widget=forms.PasswordInput(),
         label=('Repeat Password')
     )
+    Opis = forms.CharField(max_length=500)
     
     def clean_Password(self):
         password1= self.data.get('Password')
