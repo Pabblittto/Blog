@@ -1,0 +1,97 @@
+<<<<<<< HEAD
+#Title
+{
+    float: left;
+    margin: 10px;
+    font-size: 26px;
+    padding: 15px;
+    
+=======
+:root{
+--color-one:#F3FFB6;
+--color-two:#D38B5D;
+--color-three:rgb(196, 104, 47);/* jakiej najechanie myszką*/
+--color-slogan:#F3FFB6;
+<<<<<<< HEAD
+>>>>>>> parent of a30bb8f... komitt elo
+=======
+>>>>>>> parent of a30bb8f... komitt elo
+}
+#NavBar
+{
+    float : right;
+    margin-right: 20px;
+}
+.Nav
+{
+    float : left;
+    padding: 15px; 
+}
+.MenuA
+{
+    float: left;
+    display: block;
+    color: black;
+    text-align: center;
+    padding: 15px;
+    margin: 10px 10px 0px 10px;
+    border: dotted 0.5px;
+    text-decoration: none;
+    transition: 0.3s ease;
+    opacity: 0.7;
+}
+.MenuA:hover
+{
+    background-color: gray;
+    color: white;
+    opacity: 1;
+}
+.MenuA:visited
+{
+    text-decoration: none;
+}
+<<<<<<< HEAD
+.MenuA:active
+{
+    text-decoration: none;
+}
+#Container
+{
+    width: auto;
+    height: auto;
+    padding: 10px;
+    margin: 10px;
+    background-color: rgb(219, 218, 218);
+}
+.Post_Date
+{
+    text-align: right;
+    font-weight: bold;
+    margin-right: 10px;
+}
+.Post_Title
+{
+    font-size: 30px;
+    font-style: italic;
+    margin-bottom: 10px;
+    text-align: center;
+    font-weight: bold;
+}
+.Post_Content
+{
+    font-size: 15px;
+    margin-left: 10px;
+=======
+
+.slogan{
+    font-family: 'Pacifico', cursive;
+    color: var(--color-slogan);
+}
+
+.main-container{
+    font-family: 'Roboto', sans-serif;
+<<<<<<< HEAD
+>>>>>>> parent of a30bb8f... komitt elo
+=======
+>>>>>>> parent of a30bb8f... komitt elo
+}
