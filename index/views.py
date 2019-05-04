@@ -1,5 +1,6 @@
-from django.shortcuts import render, redirect
+from django.shortcuts import render
 from django.http import HttpResponse
+<<<<<<< HEAD
 from .form import LoginForm,RegisterForm
 from django.contrib.auth.forms import UserCreationForm
 from django.contrib import messages
@@ -7,6 +8,8 @@ from django.db import models
 from django.contrib.auth.models import User
 from .models import Uzytkownik, Post, Blog
 from django.contrib.auth import views as auth_views
+=======
+>>>>>>> parent of a30bb8f... komitt elo
 
 def profile(request):
     if request.user.is_authenticated:
@@ -16,6 +19,7 @@ def profile(request):
         }
         return render(request,'shared/profile.html',data)
 def home(request):
+<<<<<<< HEAD
     posts = Post.objects.all()
     blogs = Blog.objects.all()
     users = User.objects.all()
@@ -45,3 +49,7 @@ def registration(request):
     else:
         Form= RegisterForm()
         return render(request,'index/registration.html',{'form':Form})
+=======
+    # tu trzeba pobrac z bazy danych najnowsze elementy
+    return render(request,'index/index.html')
+>>>>>>> parent of a30bb8f... komitt elo

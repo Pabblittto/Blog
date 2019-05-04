@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 #Title
 {
     float: left;
@@ -5,6 +6,13 @@
     font-size: 26px;
     padding: 15px;
     
+=======
+:root{
+--color-one:#F3FFB6;
+--color-two:#D38B5D;
+--color-three:rgb(196, 104, 47);/* jakiej najechanie myszką*/
+--color-slogan:#F3FFB6;
+>>>>>>> parent of a30bb8f... komitt elo
 }
 #NavBar
 {
@@ -39,6 +47,7 @@
 {
     text-decoration: none;
 }
+<<<<<<< HEAD
 .MenuA:active
 {
     text-decoration: none;
@@ -69,4 +78,14 @@
 {
     font-size: 15px;
     margin-left: 10px;
+=======
+
+.slogan{
+    font-family: 'Pacifico', cursive;
+    color: var(--color-slogan);
+}
+
+.main-container{
+    font-family: 'Roboto', sans-serif;
+>>>>>>> parent of a30bb8f... komitt elo
 }

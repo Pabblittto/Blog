@@ -18,6 +18,10 @@ from django.urls import path, include
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+<<<<<<< HEAD
     path('index/', include('index.urls') ),   
     path('',include('index.urls'))
+=======
+    path('', include('index.urls') ),
+>>>>>>> parent of a30bb8f... komitt elo
 ]

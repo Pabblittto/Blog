@@ -22,7 +22,7 @@ class Post(models.Model):
     obrazek=models.ImageField(upload_to='Obrazki')
 
 class Uzytkownik(models.Model):
-    User=models.OneToOneField(User,on_delete=models.CASCADE,primary_key=True) #dziedziczenie pola z wbudowanej tabeli User
+    uzytkownik=models.OneToOneField(User,on_delete=models.CASCADE) #dziedziczenie pola z wbudowanej tabeli User
     zdjecie_profilowe=models.ImageField(default='domyslny_obrazek.jpg',upload_to='Obrazki')
     opis_profilu=models.CharField(max_length=1000)
 
@@ -41,3 +41,5 @@ class Komentarz(models.Model):
     ID_Posta=models.ForeignKey(Post,on_delete=models.CASCADE)
     data_zamieszczenia=models.DateTimeField(default=timezone.now)
     tresc=models.TextField()
+
+
